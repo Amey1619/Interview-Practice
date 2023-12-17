@@ -1,8 +1,15 @@
 import "./custom.css";
 import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
-function Card({ objectID, title, author, url }) {
-
+function Card({ objectID, title, author, date }) {
+  const updatedAtDate = new Date(date);
+  const formattedDate = updatedAtDate
+    .toLocaleDateString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }).replace(/,/g, "");
   return (
     <Link to={`/post/${objectID}`} className="custom-card">
       <div className="card-content">
@@ -13,9 +20,7 @@ function Card({ objectID, title, author, url }) {
             {!author ? "Unknown" : author}
           </span>
         </p>
-        <a href={url} style={{ color: "purple", textDecoration: "underline" }}>
-          Read more
-        </a>
+        <p style={{color:"purple"}}>{formattedDate}</p>
       </div>
     </Link>
   );

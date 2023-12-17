@@ -9,6 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 const Home = () => {
   const [value, setValue] = useState("");
   const [result, setResult] = useState(null);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +18,7 @@ const Home = () => {
           `https://hn.algolia.com/api/v1/search?query=${value}`
         );
         console.log(response.data.hits);
-        setResult(response.data.hits);
+        setResult(response.data.hits);       
       } catch (error) {
         console.log("Errors is fetching data: ", error);
       }
@@ -30,7 +31,7 @@ const Home = () => {
       <TextField
         variant="outlined"
         color="secondary"
-        sx={{width: "45rem", margin: "10px"}}
+        sx={{ width: "45rem", margin: "10px" }}
         placeholder="Search here..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
@@ -38,9 +39,8 @@ const Home = () => {
           startAdornment: (
             <InputAdornment position="start">
               <SearchIcon color="action" />{" "}
-              {/* Use the color that fits your design */}
             </InputAdornment>
-          )
+          ),
         }}
       />
       {result &&
@@ -49,7 +49,7 @@ const Home = () => {
             key={res.objectID}
             title={res.title}
             author={res.author}
-            url={res.url}
+            date={res.updated_at}
             objectID={res.objectID}
           />
         ))}
