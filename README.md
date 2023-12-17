@@ -9,9 +9,9 @@ Currently, two official plugins are available:
 
 # How to Run the Project
 
-step-1: *Fork the Project*
+step-1: *Fork the Project into your respository*
 
-step-2: *Clone the Project* 
+step-2: *Clone the Project into your respository* 
   
   Create a Folder  `cd folder name`
 
