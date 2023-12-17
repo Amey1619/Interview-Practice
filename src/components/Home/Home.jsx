@@ -17,7 +17,6 @@ const Home = () => {
         const response = await axios.get(
           `https://hn.algolia.com/api/v1/search?query=${value}`
         );
-        console.log(response.data.hits);
         setResult(response.data.hits);       
       } catch (error) {
         console.log("Errors is fetching data: ", error);
