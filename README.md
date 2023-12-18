@@ -28,5 +28,12 @@ step-3 *Installing Dependencies*
 Step-4 *Running the Project*
 
 Run the Project by `npm run dev`
-            
 
+
+# Screenshots
+
+
+![Screenshot (10)](https://github.com/Amey1619/unity-tasks/assets/89736812/be8735fd-5382-43a9-8226-525be9294307)
+
+
+![Screenshot (11)](https://github.com/Amey1619/unity-tasks/assets/89736812/de7e56f7-ba20-47b8-ae55-38fcd98180ac)
